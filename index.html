@@ -77,42 +77,29 @@
 # Reveal.js
 ### An Alternative to PowerPoint
 ---
-# Presenteren
+## Wat is er mis met
+# PowerPoint
 --
-## Navigeren
-Druk op 'spatie' om naar het volgende scherm te gaan.
+# BINARY
 --
-## Presenteren
-Druk op 'f' voor full screen (F11 in Internet Explorer).
+# BINARY
+<!-- .slide: data-background="img/binary.jpg" -->
 --
-## Overzicht
-Druk op 'o' voor een overzicht.
+# PROPRIETARY
 --
-## Pauze
-Druk op '.' om het scherm op zwart te zetten.
+# PROPRIETARY
+<!-- .slide: data-background="img/windows.png" -->
 --
-## Presentatiemodus
-Druk op 's' om de presentatiemodus te activeren (niet in Internet Explorer).
+# MIX of 
+# MARKUP and 
+# CONTENT
 --
-## PDF
-* Werkt momenteel alleen/vooral in Google Chrome
-* CTRL+P (of CMD+P op de Mac)
-* Bestemming > Wijzigen > Opslaan als pdf
-* Instructie voor [printen](https://github.com/hakimel/reveal.js/#pdf-export)<!-- .element: target="_blank" -->
-* Klik [hier](?print-pdf) voor de juiste opmaak om te printen.<!-- .element: target="_blank" -->
+# MIX of 
+# MARKUP and 
+# CONTENT
+<!-- .slide: data-background="img/powerpoint-2013.png" -->
 ---
-# Maken
-## van slides
---
-## Animaties
-* De simpele<!-- .element: class="fragment" -->
-* animaties met bullets<!-- .element: class="fragment" -->
-* werken al out-of-the-box<!-- .element: class="fragment" -->
---
-## Geneste Slides
-* Horizontale rij voor onderwerpen
-* Verticale kolom voor inhoud
-* Druk nogmaals op 'o' om de structuur te bekijken<!-- .element: class="fragment" -->
+# Reveal.js
 --
 ## Slides in HTML
 ```html
@@ -145,15 +132,15 @@ Druk op 's' om de presentatiemodus te activeren (niet in Internet Explorer).
     <section>
         <h2>Animaties</h2>
         <ul>
-            <li class="fragment visible" data-fragment-index="0">De simpele<!-- --></li>
-            <li class="fragment visible" data-fragment-index="1">animaties met bullets<!-- --></li>
-            <li class="fragment visible" data-fragment-index="2">werken al out-of-the-box<!-- --></li>
+            <li class="fragment" data-fragment-index="0">De simpele</li>
+            <li class="fragment" data-fragment-index="1">animaties met bullets</li>
+            <li class="fragment" data-fragment-index="2">werken al out-of-the-box</li>
         </ul>
     </section>
 </section>
 ```
 --
-## Of in Markdown
+## Slides in Markdown
 ```markdown
 ## Presenteren
 Druk op 'f' voor full screen.
@@ -177,8 +164,78 @@ Druk op 's' om de presentatiemodus te activeren.
  --
 ```
 --
+## Layout in CSS
+```css
+@import url(https://fonts.googleapis.com/css?family=News+Cycle:400,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+/**
+ * A simple theme for reveal.js presentations, similar
+ * to the default theme. The accent color is darkblue.
+ *
+ * This theme is Copyright (C) 2012 Owen Versteeg, https://github.com/StereotypicalApps. It is MIT licensed.
+ * reveal.js is Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+body {
+  background: white;
+  background-color: white; }
+
+.reveal {
+  font-family: "Calibri", sans-serif;
+  font-size: 36px;
+  font-weight: normal;
+  letter-spacing: -0.02em;
+  color: black; }
+
+::selection {
+  color: white;
+  background: rgba(0, 0, 0, 0.99);
+  text-shadow: none; }
+
+/*********************************************
+ * HEADERS
+ *********************************************/
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  margin: 0 0 20px 0;
+  color: #00539F;
+  font-family: "Calibri", Impact, sans-serif;
+  line-height: 0.9em;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  text-shadow: none; }
+
+.reveal h1 {
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); }
+```
+--
+# Titel1
+## Titel2
+### Titel3
+Content  
+
+* Bullets
+* Bullets
+  
+En een opsomming
+
+    
+1. Punt 1
+1. Punt 2
+1. Al het bovenstaande
+--
+## Animaties
+* De simpele<!-- .element: class="fragment" -->
+* animaties met bullets<!-- .element: class="fragment" -->
+* werken al out-of-the-box<!-- .element: class="fragment" -->
+--
 ## Syntax Highlighting
-Source:
 ```markdown
 '''cs
 class Program
@@ -190,7 +247,6 @@ class Program
 }
 '''
 ```
-Output:<!-- .element: style="text-align: left" -->
 ```cs
 class Program
 {
@@ -200,9 +256,9 @@ class Program
     }
 }
 ```
+<!-- .element: class="fragment" -->
 --
 ## Syntax Highlighting
-Source:
 ```markdown
 '''sql
 CREATE PROCEDURE [dbo].[GetStudentGrades]
@@ -214,7 +270,6 @@ CREATE PROCEDURE [dbo].[GetStudentGrades]
 GO
 '''
 ```
-Output:
 ```sql
 CREATE PROCEDURE [dbo].[GetStudentGrades]
             @StudentID int
@@ -224,18 +279,18 @@ CREATE PROCEDURE [dbo].[GetStudentGrades]
 
 GO
 ```
+<!-- .element: class="fragment" -->
 --
 ## Syntax Highlighting
-Source:
 ```markdown
 '''bash
 git commit -am 'my first commit'
 '''
 ```
-Output:
 ```bash
 git commit -am 'my first commit'
 ```
+<!-- .element: class="fragment" -->
 --
 ## JavaScript Libraries
 Beweeg de muis over het diagram.
@@ -248,6 +303,9 @@ Beweeg de muis over het diagram.
 --
 ## Afbeeldingen
 ![plaatje](img/1446389_58576922.jpg)
+--
+## Video
+<iframe class="stretch" data-autoplay src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0&controls=0&showinfo=0&loop=1" frameborder="0" allowfullscreen></iframe>
 --
 ## Thema's
 Het wisselen van thema laat zien hoe eenvoudig een template kan worden aangepast:  
@@ -262,20 +320,39 @@ Het wisselen van thema laat zien hoe eenvoudig een template kan worden aangepast
 * [Solarized](?theme=solarized#/themes)
 <!-- .slide: id="themes" -->
 ---
+# Presenteren
+--
+## Navigeren
+Druk op 'spatie' om naar het volgende scherm te gaan.
+--
+## Presenteren
+Druk op 'f' voor full screen (F11 in Internet Explorer).
+--
+## Overzicht
+Druk op 'o' voor een overzicht.
+--
+## Pauze
+Druk op '.' om het scherm op zwart te zetten.
+--
+## Presentatiemodus
+Druk op 's' om de presentatiemodus te activeren (niet in Internet Explorer).
+--
+## PDF
+* Klik **[hier](?print-pdf)** voor de juiste CSS om te printen<!-- .element: target="_blank" -->
+* CTRL+P (of CMD+P op de Mac)
+* Bestemming > Wijzigen > Opslaan als pdf
+* Werkt momenteel alleen/vooral in Google Chrome
+---
 # Voordelen
-## en nadelen
+### en ook nadelen??<!-- .element: class="fragment" -->
 --
 ## Voordelen
-1. Alles in ASCII
-1. Cross platform
- * Windows
- * Apple
- * Linux
-1. Versiebeheer
- * Commit
- * Branch/Merge
- * Diff
-1. Scheiding van opmaak & inhoud
+1. Alles is plain text<!-- .element: class="fragment" -->
+1. Versiebeheer<!-- .element: class="fragment" -->
+1. Cross platform<!-- .element: class="fragment" -->
+1. Scheiding van markup & content<!-- .element: class="fragment" -->
+1. Geweldige viewer<!-- .element: class="fragment" -->
+1. HTML5 capabilities<!-- .element: class="fragment" -->
 --
 ## Versiebeheer
 ```bash
@@ -298,7 +375,7 @@ b6b1020 loading en tracking
 d110383 initial commit
 ```
 --
-## Wijzigingen bekijken
+## Versiebeheer
 ```diff
  # Entity Framework
 -Getting Started
@@ -320,22 +397,30 @@ d110383 initial commit
  ![image](01-Introduction/development-workflows-05.png)
 ```
 --
-## Source
-Bekijk de <a class="" onClick='window.open("view-source:" + window.location.href); return false;'>code</a> van deze presentatie.
-
+## Versiebeheer
+![history](img/history.png)
+-- 
+## Cross Platform
+![windows](img/visualstudio.png)
 --
 ## Cross Platform
 ![apple](img/brackets.io.png)
 --
-## Cross Platform
-![windows](img/visualstudio.png)
---
 ## Nadelen
 1. Geen WYSIWYG
-1. Moelijker met vormen en animaties
+ * Editor + browser
+1. Moelijker met vormen, animaties en plaatjes
  * Er bestaat een online editor: http://slid.es
+--
+## Samenvattend
+Reveal.js
 
- <!-- .element: class="fragment" -->
+* Kan meer dan PowerPoint
+* Werkt voor ons in 90% van de situaties
+* De overige 10% moeten we
+  * Extra moeite voor doen
+  * Op een andere manier invullen
+  * Niet meer doen
 ---
 # Reveal.js
 * Officiële presentatie: http://lab.hakim.se/reveal-js
