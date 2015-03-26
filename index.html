@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Reveal.js</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/infosupport.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/vs.css">
+        <link rel="stylesheet" href="plugin/toc-progress/toc-progress.css">
+        
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+        <!--Add support for earlier versions of Internet Explorer -->
+	    <!--[if lt IE 9]>
+	    <script src="lib/js/html5shiv.js"></script>
+	    <![endif]-->
+        
+        <style>
+            .logo {
+                position: absolute;
+                bottom: 15px;
+                left: 5px;
+            }
+            
+            .note {
+                text-align: left;
+                float: left;
+            }
+            .note:before {
+                content: "Note: ";
+                font-weight: bold;
+            }
+        </style>
+        
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+        
+      
+<link rel="stylesheet" href="plugin/d3js/tessellation.css">
+
+
+	</head>
+
+	<body>
+
+ 
+        
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section data-markdown data-separator="^---" data-vertical="^--" data-notes="^Note:" >
+					<script type="text/template">
+# Reveal.js
+### An Alternative to PowerPoint
+---
+# Presenteren
+--
+## Navigeren
+Druk op 'spatie' om naar het volgende scherm te gaan.
+--
+## Presenteren
+Druk op 'f' voor full screen (F11 in Internet Explorer).
+--
+## Overzicht
+Druk op 'o' voor een overzicht.
+--
+## Pauze
+Druk op '.' om het scherm op zwart te zetten.
+--
+## Presentatiemodus
+Druk op 's' om de presentatiemodus te activeren (niet in Internet Explorer).
+--
+## PDF
+* Werkt momenteel alleen/vooral in Google Chrome
+* CTRL+P (of CMD+P op de Mac)
+* Bestemming > Wijzigen > Opslaan als pdf
+* Instructie voor [printen](https://github.com/hakimel/reveal.js/#pdf-export)<!-- .element: target="_blank" -->
+* Klik [hier](?print-pdf) voor de juiste opmaak om te printen.<!-- .element: target="_blank" -->
+---
+# Maken
+## van slides
+--
+## Animaties
+* De simpele<!-- .element: class="fragment" -->
+* animaties met bullets<!-- .element: class="fragment" -->
+* werken al out-of-the-box<!-- .element: class="fragment" -->
+--
+## Geneste Slides
+* Horizontale rij voor onderwerpen
+* Verticale kolom voor inhoud
+* Druk nogmaals op 'o' om de structuur te bekijken<!-- .element: class="fragment" -->
+--
+## Slides in HTML
+```html
+<section>
+    <section>
+        <h2>Presenteren</h2>
+        <p>Druk op 'f' voor full screen.</p>
+    </section>
+    <section>
+        <h2>Overzicht</h2>
+        <p>Druk op 'o' voor een overzicht.</p>
+    </section>
+    <section>
+        <h2>Pauze</h2>
+        <p>Druk op '.' om het scherm op zwart te zetten.</p>
+    </section>
+    <section>
+        <h2>Presentatiemodus</h2>
+        <p>Druk op 's' om de presentatiemodus te activeren.</p>
+    </section>
+    <section>
+        <h2>PDF</h2>
+        <ul>
+            <li>Werkt momenteel alleen/vooral in Google Chrome</li>
+            <li>CTRL+P (of CMD+P op de Mac)</li>
+            <li>Bestemming &gt; Wijzigen &gt; Opslaan als pdf</li>
+            <li><p class="fragment">Klik <a href="?print-pdf" target="_blank">hier</a> om de presentatie naar PDF te printen.</p></li>
+        </ul>
+    </section>
+    <section>
+        <h2>Animaties</h2>
+        <ul>
+            <li class="fragment visible" data-fragment-index="0">De simpele<!-- --></li>
+            <li class="fragment visible" data-fragment-index="1">animaties met bullets<!-- --></li>
+            <li class="fragment visible" data-fragment-index="2">werken al out-of-the-box<!-- --></li>
+        </ul>
+    </section>
+</section>
+```
+--
+## Of in Markdown
+```markdown
+## Presenteren
+Druk op 'f' voor full screen.
+ --
+## Overzicht
+Druk op 'o' voor een overzicht.
+ --
+## Pauze
+Druk op '.' om het scherm op zwart te zetten.
+ --
+## Presentatiemodus
+Druk op 's' om de presentatiemodus te activeren.
+ --
+## PDF
+* Werkt momenteel alleen/vooral in Google Chrome
+* CTRL+P (of CMD+P op de Mac)
+* Bestemming > Wijzigen > Opslaan als pdf
+* Klik [hier](?print-pdf) om de presentatie naar PDF te printen.<!-- .element: target="_blank" -->
+
+  <!-- .element: class="fragment" -->
+ --
+```
+--
+## Syntax Highlighting
+Source:
+```markdown
+'''cs
+class Program
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Some output");
+    }
+}
+'''
+```
+Output:<!-- .element: style="text-align: left" -->
+```cs
+class Program
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Some output");
+    }
+}
+```
+--
+## Syntax Highlighting
+Source:
+```markdown
+'''sql
+CREATE PROCEDURE [dbo].[GetStudentGrades]
+            @StudentID int
+            AS
+            SELECT EnrollmentID, Grade, CourseID, StudentID FROM dbo.StudentGrade
+            WHERE StudentID = @StudentID
+
+GO
+'''
+```
+Output:
+```sql
+CREATE PROCEDURE [dbo].[GetStudentGrades]
+            @StudentID int
+            AS
+            SELECT EnrollmentID, Grade, CourseID, StudentID FROM dbo.StudentGrade
+            WHERE StudentID = @StudentID
+
+GO
+```
+--
+## Syntax Highlighting
+Source:
+```markdown
+'''bash
+git commit -am 'my first commit'
+'''
+```
+Output:
+```bash
+git commit -am 'my first commit'
+```
+--
+## JavaScript Libraries
+Beweeg de muis over het diagram.
+<div id="js-demo">
+</div>
+--
+## Afbeeldingen 
+<!-- .element: style="color: white" -->
+<!-- .slide: data-background="img/background.jpg" -->
+--
+## Afbeeldingen
+![plaatje](img/1446389_58576922.jpg)
+--
+## Thema's
+Het wisselen van thema laat zien hoe eenvoudig een template kan worden aangepast:  
+
+* [Info Support](?#/themes)
+* [Sky](?theme=sky#/themes)
+* [Beige](?theme=beige#/themes)
+* [Simple](?theme=simple#/themes)
+* [Serif](?theme=serif#/themes)
+* [Night](?theme=night#/themes)
+* [Moon](?theme=moon#/themes)
+* [Solarized](?theme=solarized#/themes)
+<!-- .slide: id="themes" -->
+---
+# Voordelen
+## en nadelen
+--
+## Voordelen
+1. Alles in ASCII
+1. Cross platform
+ * Windows
+ * Apple
+ * Linux
+1. Versiebeheer
+ * Commit
+ * Branch/Merge
+ * Diff
+1. Scheiding van opmaak & inhoud
+--
+## Versiebeheer
+```bash
+$ git log --oneline
+19dc6fe labs toegevoegd
+afdaebe labs, concurrency, hoofdonderwerpen
+c68dc5f wijziging in pages blijkbaar
+61f98d8 Pages document toegevoegd
+f1d7996 Onderwerpen documentje van Apple Pages toegevoegd
+2d011b4 casing aangepast zodat plaatjes ook op linux werken
+f49e0a8 wat notes later verschijnen
+b3a135c ietsje betere VS highlighting
+0288405 linq2xml
+74e4692 pre-generate views en cf vs df
+c653e3a proxies e.d.
+b6b1020 loading en tracking
+51e2f8b original en current values
+0591177 annotations en fluent
+51f79d5 stored procuderes and functions
+d110383 initial commit
+```
+--
+## Wijzigingen bekijken
+```diff
+ # Entity Framework
+-Getting Started
++### Getting Started
+ ---
+ # Agenda
+ 1. Introduction
+@@ -73,7 +78,7 @@ Getting Started
+ 1. Performance Considerations
+ 1. LinqToXml
+ ---
+-Introducing
++### Introducing
+ # Entity Framework
+ --
+ ## Entity Data Model
+@@ -118,7 +123,7 @@ http://msdn.microsoft.com/en-us/data/jj590134
+ ## Code First
+ ![image](01-Introduction/development-workflows-05.png)
+```
+--
+## Source
+Bekijk de <a class="" onClick='window.open("view-source:" + window.location.href); return false;'>code</a> van deze presentatie.
+
+--
+## Cross Platform
+![apple](img/brackets.io.png)
+--
+## Cross Platform
+![windows](img/visualstudio.png)
+--
+## Nadelen
+1. Geen WYSIWYG
+1. Moelijker met vormen en animaties
+ * Er bestaat een online editor: http://slid.es
+
+ <!-- .element: class="fragment" -->
+---
+# Reveal.js
+* Officiële presentatie: http://lab.hakim.se/reveal-js
+* Source code: https://github.com/hakimel/reveal.js
+                    </script>
+				</section>
+
+			</div>
+
+            <img class="logo" src="IS%20Logo.png" />
+		</div>
+
+ 
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+        <script src="plugin/d3js/d3.v3.min.js"></script>
+        <script src="plugin/d3js/tessellation.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: false,
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.min.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+				]
+			});
+
+            Reveal.addEventListener( 'ready', function( event ) {
+                tesselationInit();
+            } );
+		</script>
+
+        
+	</body>
+</html>
