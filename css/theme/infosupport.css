@@ -152,3 +152,10 @@ h1, h2, h3 {
 ul, ol {
     width: 100%;
 }
+
+.logo {
+    position: absolute;
+    left: 5px;
+    bottom:15px;
+    height: 1em;
+}
