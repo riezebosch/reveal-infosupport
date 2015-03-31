@@ -159,3 +159,10 @@ ul, ol {
     bottom:15px;
     height: 1em;
 }
+
+body {
+    background-image: url('/img/waaier.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
