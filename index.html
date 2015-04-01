@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Reveal.js</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/infosupport.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/vs.css">
+        
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+        
+        <script>
+            function switchTemplate(css)
+            {
+                document.getElementById('theme').setAttribute('href','css/theme/' + css);
+            }
+        </script>
+
+
+        <!--Add support for earlier versions of Internet Explorer -->
+	    <!--[if lt IE 9]>
+	    <script src="lib/js/html5shiv.js"></script>
+	    <![endif]-->
+        
+        <style>
+            .note {
+                text-align: left;
+                float: left;
+            }
+            .note:before {
+                content: "Note: ";
+                font-weight: bold;
+            }
+            
+            .twitter-canvas {
+                display: none;
+            }
+            
+            
+            @media only screen  and (min-width : 1224px) {
+                .twitter-canvas {
+                    display: inherit;
+                    z-index:29; 
+                    position:absolute;
+                    right:10px;
+                    top:10px;
+                    z-index: -1;
+                }
+            }
+        </style>
+        
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+      
+        <link rel="stylesheet" href="plugin/d3js/tessellation.css">
+	</head>
+
+	<body>
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section data-markdown data-separator="^---" data-separator-vertical="^--" data-separator-notes="^Note:" >
+					<script type="text/template">
+# Reveal.js
+### An Alternative to PowerPoint
+---
+## Wat is er mis met
+# PowerPoint
+--
+# BINARY
+--
+# BINARY
+<!-- .slide: data-background="img/binary.jpg" -->
+--
+# PROPRIETARY
+--
+# PROPRIETARY
+<!-- .slide: data-background="img/windows.png" -->
+--
+# MIX of 
+# MARKUP and 
+# CONTENT
+--
+# MIX of 
+# MARKUP and 
+# CONTENT
+<!-- .slide: data-background="img/powerpoint-2013.png" -->
+---
+# Reveal.js
+--
+## Slides in HTML
+```html
+<section>
+    <section>
+        <h2>Presenteren</h2>
+        <p>Druk op 'f' voor full screen.</p>
+    </section>
+    <section>
+        <h2>Overzicht</h2>
+        <p>Druk op 'o' voor een overzicht.</p>
+    </section>
+    <section>
+        <h2>Pauze</h2>
+        <p>Druk op '.' om het scherm op zwart te zetten.</p>
+    </section>
+    <section>
+        <h2>Presentatiemodus</h2>
+        <p>Druk op 's' om de presentatiemodus te activeren.</p>
+    </section>
+    <section>
+        <h2>PDF</h2>
+        <ul>
+            <li>Werkt momenteel alleen/vooral in Google Chrome</li>
+            <li>CTRL+P (of CMD+P op de Mac)</li>
+            <li>Bestemming &gt; Wijzigen &gt; Opslaan als pdf</li>
+            <li><p class="fragment">Klik <a href="?print-pdf" target="_blank">hier</a> om de presentatie naar PDF te printen.</p></li>
+        </ul>
+    </section>
+    <section>
+        <h2>Animaties</h2>
+        <ul>
+            <li class="fragment" data-fragment-index="0">De simpele</li>
+            <li class="fragment" data-fragment-index="1">animaties met bullets</li>
+            <li class="fragment" data-fragment-index="2">werken al out-of-the-box</li>
+        </ul>
+    </section>
+</section>
+```
+--
+## Slides in Markdown
+```markdown
+## Presenteren
+Druk op 'f' voor full screen.
+ --
+## Overzicht
+Druk op 'o' voor een overzicht.
+ --
+## Pauze
+Druk op '.' om het scherm op zwart te zetten.
+ --
+## Presentatiemodus
+Druk op 's' om de presentatiemodus te activeren.
+ --
+## PDF
+* Werkt momenteel alleen/vooral in Google Chrome
+* CTRL+P (of CMD+P op de Mac)
+* Bestemming > Wijzigen > Opslaan als pdf
+* Klik [hier](?print-pdf) om de presentatie naar PDF te printen.<!-- .element: target="_blank" -->
+
+  <!-- .element: class="fragment" -->
+ --
+```
+--
+## Layout in CSS
+```css
+@import url(https://fonts.googleapis.com/css?family=News+Cycle:400,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+/**
+ * A simple theme for reveal.js presentations, similar
+ * to the default theme. The accent color is darkblue.
+ *
+ * This theme is Copyright (C) 2012 Owen Versteeg, https://github.com/StereotypicalApps. It is MIT licensed.
+ * reveal.js is Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+body {
+  background: white;
+  background-color: white; }
+
+.reveal {
+  font-family: "Calibri", sans-serif;
+  font-size: 36px;
+  font-weight: normal;
+  letter-spacing: -0.02em;
+  color: black; }
+
+::selection {
+  color: white;
+  background: rgba(0, 0, 0, 0.99);
+  text-shadow: none; }
+```
+--
+# Titel1
+## Titel2
+### Titel3
+Content  
+
+* Bullets
+* Bullets
+  
+En een opsomming
+
+1. Punt 1
+1. Punt 2
+1. Al het bovenstaande
+--
+## Animaties
+* De simpele<!-- .element: class="fragment" -->
+* animaties met bullets<!-- .element: class="fragment" -->
+* werken al out-of-the-box<!-- .element: class="fragment" -->
+--
+## Syntax Highlighting
+```markdown
+'''cs
+class Program
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Some output");
+    }
+}
+'''
+```
+```cs
+class Program
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Some output");
+    }
+}
+```
+<!-- .element: class="fragment" -->
+--
+## Syntax Highlighting
+```markdown
+'''sql
+CREATE PROCEDURE [dbo].[GetStudentGrades]
+            @StudentID int
+            AS
+            SELECT EnrollmentID, Grade, CourseID, StudentID FROM dbo.StudentGrade
+            WHERE StudentID = @StudentID
+
+GO
+'''
+```
+```sql
+CREATE PROCEDURE [dbo].[GetStudentGrades]
+            @StudentID int
+            AS
+            SELECT EnrollmentID, Grade, CourseID, StudentID FROM dbo.StudentGrade
+            WHERE StudentID = @StudentID
+
+GO
+```
+<!-- .element: class="fragment" -->
+--
+## Syntax Highlighting
+```markdown
+'''bash
+git commit -am 'my first commit'
+'''
+```
+```bash
+git commit -am 'my first commit'
+```
+<!-- .element: class="fragment" -->
+--
+## JavaScript Libraries
+Beweeg de muis over het diagram.
+<div id="js-demo">
+</div>
+--
+## Afbeeldingen 
+<!-- .element: style="color: white" -->
+<!-- .slide: data-background="img/background.jpg" -->
+--
+## Afbeeldingen  
+![plaatje](img/1446389_58576922.jpg)
+
+<!-- .element: class="stretch" -->
+--
+## Video
+<iframe class="stretch" data-autoplay src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0&controls=0&showinfo=0&loop=1" frameborder="0" allowfullscreen></iframe>
+--
+## Thema's
+Het wisselen van thema laat zien hoe eenvoudig een template kan worden aangepast:  
+<ul>
+<li><a href="#" onclick="switchTemplate('infosupport.css'); return false;">Info Support</a></li>
+<li><a href="#" onclick="switchTemplate('black.css'); return false;">Black (default)</a></li>
+<li><a href="#" onclick="switchTemplate('white.css'); return false;">White</a></li>
+<li><a href="#" onclick="switchTemplate('league.css'); return false;">League</a></li>
+<li><a href="#" onclick="switchTemplate('sky.css'); return false;">Sky</a></li>
+<li><a href="#" onclick="switchTemplate('beige.css'); return false;">Beige</a></li>
+<li><a href="#" onclick="switchTemplate('simple.css'); return false;">Simple</a></li>
+<li><a href="#" onclick="switchTemplate('serif.css'); return false;">Serif</a></li>
+<li><a href="#" onclick="switchTemplate('night.css'); return false;">Night</a></li>
+<li><a href="#" onclick="switchTemplate('moon.css'); return false;">Moon</a></li>
+<li><a href="#" onclick="switchTemplate('solarized.css'); return false;">Solarized</a></li>
+</ul>
+---
+# Presenteren
+--
+## Navigeren
+Druk op 'spatie' om naar het volgende scherm te gaan.
+--
+## Presenteren
+Druk op 'f' voor full screen (F11 in Internet Explorer).
+--
+## Overzicht
+Druk op 'o' voor een overzicht.
+--
+## Pauze
+Druk op '.' om het scherm op zwart te zetten.
+--
+## Presentatiemodus
+Druk op 's' om de presentatiemodus te activeren (niet in Internet Explorer).
+--
+## PDF
+* Klik **[hier](?print-pdf)** voor de juiste CSS om te printen<!-- .element: target="_blank" -->
+* CTRL+P (of CMD+P op de Mac)
+* Bestemming > Wijzigen > Opslaan als pdf
+* Werkt momenteel alleen/vooral in Google Chrome
+---
+# Voordelen
+--
+# Voordelen
+### en ook nadelen??
+--
+## Voordelen
+1. Alles is plain text<!-- .element: class="fragment" -->
+1. Versiebeheer<!-- .element: class="fragment" -->
+1. Cross platform<!-- .element: class="fragment" -->
+1. Scheiding van markup & content<!-- .element: class="fragment" -->
+1. Geweldige viewer<!-- .element: class="fragment" -->
+1. HTML5 capabilities<!-- .element: class="fragment" -->
+--
+## Versiebeheer
+```bash
+$ git log --oneline
+19dc6fe labs toegevoegd
+afdaebe labs, concurrency, hoofdonderwerpen
+c68dc5f wijziging in pages blijkbaar
+61f98d8 Pages document toegevoegd
+f1d7996 Onderwerpen documentje van Apple Pages toegevoegd
+2d011b4 casing aangepast zodat plaatjes ook op linux werken
+f49e0a8 wat notes later verschijnen
+b3a135c ietsje betere VS highlighting
+0288405 linq2xml
+74e4692 pre-generate views en cf vs df
+c653e3a proxies e.d.
+b6b1020 loading en tracking
+51e2f8b original en current values
+0591177 annotations en fluent
+51f79d5 stored procuderes and functions
+d110383 initial commit
+```
+--
+## Versiebeheer
+```diff
+ # Entity Framework
+-Getting Started
++### Getting Started
+ ---
+ # Agenda
+ 1. Introduction
+@@ -73,7 +78,7 @@ Getting Started
+ 1. Performance Considerations
+ 1. LinqToXml
+ ---
+-Introducing
++### Introducing
+ # Entity Framework
+ --
+ ## Entity Data Model
+@@ -118,7 +123,7 @@ http://msdn.microsoft.com/en-us/data/jj590134
+ ## Code First
+ ![image](01-Introduction/development-workflows-05.png)
+```
+--
+## Versiebeheer
+![history](img/history.png)<!-- .element: style="box-shadow: none" -->
+-- 
+## Cross Platform
+![windows](img/visualstudio.png)
+--
+## Cross Platform
+![apple](img/brackets.io.png)
+--
+## Nadelen
+1. Geen WYSIWYG
+ * Editor + browser
+1. Moelijker met vormen, animaties en plaatjes
+ * Er bestaat een online editor: http://slid.es
+--
+## Samenvattend
+Reveal.js
+
+* Kan meer dan PowerPoint
+* Werkt voor ons in 90% van de situaties
+* De overige 10% moeten we
+  * Extra moeite voor doen
+  * Op een andere manier invullen
+  * Niet meer doen
+---
+# Reveal.js
+* Officiële presentatie: http://lab.hakim.se/reveal-js
+* Source code: https://github.com/hakimel/reveal.js
+                    </script>
+				</section>
+
+			</div>
+                
+            <div class="twitter-canvas">
+                <a class="twitter-timeline" href="https://twitter.com/hashtag/revealjs" data-widget-id="581431556872507392" data-chrome="noheader nofooter" width="220px" height="100%">#revealjs</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </div>
+		</div>
+        
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+        <script src="plugin/d3js/d3.v3.min.js"></script>
+        <script src="plugin/d3js/tessellation.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: false,
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: 'none', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.min.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+            Reveal.addEventListener( 'ready', function( event ) {
+                tesselationInit();
+            } );
+		</script>
+	</body>
+</html>
