@@ -276,28 +276,24 @@ ul, ol {
     width: 100%;
 }
 
-.logo {
-    position: absolute;
-    left: 5px;
-    bottom:15px;
-    height: 1em;
-}
-
+/*********************************************
+ * LAYOUT
+ *********************************************/
 body {
     background-image: url('../../img/waaier.svg');
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
+    background-size: contain;
+    background-position: right bottom;
 }
 
 .reveal::after {
     content: "";
     background-image: url(../../img/logo.svg);
-    background-repeat: space;
+    background-repeat: no-repeat;
     bottom: 15px;
-    left: 5px;
-    height: 1em;
-    width: 5em;
+    left: 15px;
+    height: 5%;
+    width: 100%;
     position: absolute;
     background-size: contain;
 }
