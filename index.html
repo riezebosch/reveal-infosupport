@@ -19,7 +19,7 @@
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/vs.css">
-        
+
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
@@ -28,7 +28,7 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
-        
+
         <script>
             function switchTemplate(css)
             {
@@ -41,17 +41,17 @@
 	    <!--[if lt IE 9]>
 	    <script src="lib/js/html5shiv.js"></script>
 	    <![endif]-->
-        
+
         <style>
             .twitter-canvas {
                 display: none;
             }
-            
+
             /* only show the twitter feed on non-mobile devices */
             @media only screen  and (min-width : 1224px) {
                 .twitter-canvas {
                     display: inherit;
-                    z-index:29; 
+                    z-index:29;
                     position:absolute;
                     right:10px;
                     top:10px;
@@ -59,16 +59,16 @@
                 }
 
                 /* reserve some additional space for the twitter feed */
-              .reveal .slides > section p { 
+              .reveal .slides > section p {
                     width: calc(100% - 50px);
                 }
             }
         </style>
-        
+
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
-      
+
         <link rel="stylesheet" href="plugin/d3js/tessellation.css">
 	</head>
 
@@ -84,22 +84,14 @@
 ## Wat is er mis met
 # PowerPoint
 --
-# BINARY
---
-# BINARY
+# BINARY <!-- .element: style="text-shadow: white 0em 0em 0.2em, white 0em 0em 0.2em, white 0em 0em 0.2em" -->
 <!-- .slide: data-background="img/binary.jpg" -->
---
-# PROPRIETARY
 --
 # PROPRIETARY
 <!-- .slide: data-background="img/windows.png" -->
 --
-# MIX of 
-# MARKUP and 
-# CONTENT
---
-# MIX of 
-# MARKUP and 
+# MIX of
+# MARKUP and
 # CONTENT
 <!-- .slide: data-background="img/powerpoint-2013.png" -->
 ---
@@ -110,28 +102,19 @@
 ```html
 <section>
     <section>
-        <h2>Presenteren</h2>
-        <p>Druk op 'f' voor full screen.</p>
+        <h2>Slide 1</h2>
+        <p>Hier volgt de tekst</p>
     </section>
     <section>
-        <h2>Overzicht</h2>
-        <p>Druk op 'o' voor een overzicht.</p>
+        <h2>Slide 2</h2>
+        <p>Hier volgt de tekst</p>
     </section>
     <section>
-        <h2>Pauze</h2>
-        <p>Druk op '.' om het scherm op zwart te zetten.</p>
-    </section>
-    <section>
-        <h2>Presentatiemodus</h2>
-        <p>Druk op 's' om de presentatiemodus te activeren.</p>
-    </section>
-    <section>
-        <h2>PDF</h2>
+        <h2>Slide 3</h2>
         <ul>
-            <li>Werkt momenteel alleen/vooral in Google Chrome</li>
-            <li>CTRL+P (of CMD+P op de Mac)</li>
-            <li>Bestemming &gt; Wijzigen &gt; Opslaan als pdf</li>
-            <li><p class="fragment">Klik <a href="?print-pdf" target="_blank">hier</a> om de presentatie naar PDF te printen.</p></li>
+            <li>Punt 1</li>
+            <li>Punt 2</li>
+            <li>Punt 3</li>
         </ul>
     </section>
     <section>
@@ -147,68 +130,49 @@
 --
 ## Slides in Markdown
 ```markdown
-## Presenteren
-Druk op 'f' voor full screen.
+## Slide 1
+Hier volgt de tekst
  --
-## Overzicht
-Druk op 'o' voor een overzicht.
+## Slide 2
+Hier volgt de tekst
  --
-## Pauze
-Druk op '.' om het scherm op zwart te zetten.
+## Slide 3
+* Punt 1
+* Punt 2
+* Punt 3
  --
-## Presentatiemodus
-Druk op 's' om de presentatiemodus te activeren.
- --
-## PDF
-* Werkt momenteel alleen/vooral in Google Chrome
-* CTRL+P (of CMD+P op de Mac)
-* Bestemming > Wijzigen > Opslaan als pdf
-* Klik [hier](?print-pdf) om de presentatie naar PDF te printen.<!-- .element: target="_blank" -->
-
-  <!-- .element: class="fragment" -->
- --
+## Animaties
+* Punt 1<!-- .element: class="fragment" -->
+* Punt 2<!-- .element: class="fragment" -->
+* Punt 3<!-- .element: class="fragment" -->
 ```
 --
-## Layout in CSS
+## Opmaak in CSS
 ```css
-@import url(https://fonts.googleapis.com/css?family=News+Cycle:400,700);
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
-/**
- * A simple theme for reveal.js presentations, similar
- * to the default theme. The accent color is darkblue.
- *
- * This theme is Copyright (C) 2012 Owen Versteeg, https://github.com/StereotypicalApps. It is MIT licensed.
- * reveal.js is Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
- */
-/*********************************************
- * GLOBAL STYLES
- *********************************************/
 body {
-  background: white;
-  background-color: white; }
-
-.reveal {
-  font-family: "Calibri", sans-serif;
-  font-size: 36px;
-  font-weight: normal;
-  letter-spacing: -0.02em;
-  color: black; }
-
-::selection {
-  color: white;
-  background: rgba(0, 0, 0, 0.99);
-  text-shadow: none; }
+    background-image: url('../../img/waaier.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right bottom;
+}
 ```
 ---
-## What's in the 
-# Box?
+## Wat is er mogelijk met
+#Markdown
 --
+## Titel
+```markdown
+# Titel1
+## Titel2
+### Titel3
+```
 # Titel1
 ## Titel2
 ### Titel3
 --
-## Opsomming  
-Bullets
+## Opsomming
+```markdown
+Bullet points
 
 * Punt 1
 * Punt 2
@@ -218,18 +182,40 @@ Of genummerd
 1. Punt 1
 1. Punt 2
 1. Al het bovenstaande
+```
+Bullet points
 
+* Punt 1
+* Punt 2
+
+Of genummerd
+
+1. Punt 1
+1. Punt 2
+1. Al het bovenstaande
 --
 ## Tabel
+```markdown
 auteur            | geboren | overleden | land
 ------------------|:-------:|:---------:|-----
-Eliette Abécassis | 1969    | -         | Frankrijk	
-Edmond About      | 1828    | 1885      | Frankrijk	 
-Paul Adam         | 1862    | 1920      | Frankrijk	
-Gustave Aimard    | 1818    | 1863      | Frankrijk	
-
+Eliette Abécassis | 1969    | -         | Frankrijk
+Edmond About      | 1828    | 1885      | Frankrijk
+Paul Adam         | 1862    | 1920      | Frankrijk
+Gustave Aimard    | 1818    | 1863      | Frankrijk
+```
+auteur            | geboren | overleden | land
+------------------|:-------:|:---------:|-----
+Eliette Abécassis | 1969    | -         | Frankrijk
+Edmond About      | 1828    | 1885      | Frankrijk
+Paul Adam         | 1862    | 1920      | Frankrijk
+Gustave Aimard    | 1818    | 1863      | Frankrijk
 --
 ## Animaties
+```markdown
+* De simpele<!-- .element: class="fragment" -->
+* animaties met bullets<!-- .element: class="fragment" -->
+* werken al out-of-the-box<!-- .element: class="fragment" -->
+```
 * De simpele<!-- .element: class="fragment" -->
 * animaties met bullets<!-- .element: class="fragment" -->
 * werken al out-of-the-box<!-- .element: class="fragment" -->
@@ -255,7 +241,9 @@ class Program
     }
 }
 ```
-<!-- .element: class="fragment" -->
+--
+## Integratie met .NET Fiddle
+<iframe width="100%" height="475" src="https://dotnetfiddle.net/Widget/CsCons" frameborder="0"></iframe>
 --
 ## Syntax Highlighting
 ```markdown
@@ -278,7 +266,6 @@ CREATE PROCEDURE [dbo].[GetStudentGrades]
 
 GO
 ```
-<!-- .element: class="fragment" -->
 --
 ## Syntax Highlighting
 ```markdown
@@ -289,27 +276,34 @@ git commit -am 'my first commit'
 ```bash
 git commit -am 'my first commit'
 ```
-<!-- .element: class="fragment" -->
 --
 ## JavaScript Libraries embedden
 Beweeg de muis over het diagram.
 <div id="js-demo">
 </div>
 --
-## Afbeeldingen 
-<!-- .element: style="color: white" -->
-<!-- .slide: data-background="img/background.jpg" -->
---
-## Afbeeldingen  
+## Afbeeldingen
+```markdown
+![plaatje](img/1446389_58576922.jpg)
+```
 ![plaatje](img/1446389_58576922.jpg)
 
 <!-- .element: class="stretch" -->
 --
+## Achtergrond
+<!-- .element: style="color: white" -->
+
+```markdown
+<!-- .slide: data-background="img/background.jpg" -->
+```
+<!-- .slide: data-background="img/background.jpg" -->
+--
 ## Video
 <iframe class="stretch" data-autoplay src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0&controls=0&showinfo=0&loop=1" frameborder="0" allowfullscreen></iframe>
+*Toegegeven, dit is geen markdown.*
 --
 ## Thema's
-Het wisselen van thema laat zien hoe eenvoudig een template kan worden aangepast:  
+Het wisselen van thema laat zien hoe eenvoudig een template kan worden aangepast:
 <ul>
 <li><a href="#" onclick="switchTemplate('infosupport.css'); return false;">Info Support</a></li>
 <li><a href="#" onclick="switchTemplate('black.css'); return false;">Black (default)</a></li>
@@ -324,7 +318,7 @@ Het wisselen van thema laat zien hoe eenvoudig een template kan worden aangepast
 <li><a href="#" onclick="switchTemplate('solarized.css'); return false;">Solarized</a></li>
 </ul>
 ---
-## Hoe werkt de 
+## Hoe werkt de
 # Viewer
 --
 ## Navigeren
@@ -343,10 +337,10 @@ Gebruik de &larr; en &rarr; om naar het vorige of volgende onderwerp te gaan.
 Druk op 'f' voor full screen (F11 in Internet Explorer).
 --
 ## Overzicht
-Druk op 'o' voor een overzicht.
+Druk op 'o' of 'ESC' voor een overzicht.
 --
 ## Pauze
-Druk op '.' (of 'b') om het scherm op zwart te zetten.
+Druk op '.' of 'b' om het scherm op zwart te zetten.
 --
 ## Presentatiemodus
 Druk op 's' om de presentatiemodus te activeren (werkt niet in Internet Explorer).
@@ -358,9 +352,7 @@ Druk op 's' om de presentatiemodus te activeren (werkt niet in Internet Explorer
 * Werkt momenteel alleen/vooral in Google Chrome
 ---
 # Voordelen
---
-# Voordelen
-### en ook nadelen??
+### en ook nadelen?? <!-- .element: class="fragment" -->
 --
 ## Voordelen
 1. Alles is plain text<!-- .element: class="fragment" -->
@@ -415,7 +407,7 @@ d110383 initial commit
 --
 ## Versiebeheer
 ![history](img/history.png)<!-- .element: style="box-shadow: none" -->
--- 
+--
 ## Cross Platform
 ![windows](img/visualstudio.png)
 --
@@ -447,13 +439,13 @@ Kijk ook vooral in de **[source code](https://github.com/riezebosch/reveal-infos
 				</section>
 
 			</div>
-                
+
             <div class="twitter-canvas">
                 <a class="twitter-timeline" href="https://twitter.com/hashtag/revealjs" data-widget-id="581431556872507392" data-chrome="noheader nofooter" data-tweet-limit="3" width="220px" height="100%">#revealjs</a>
                 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
             </div>
 		</div>
-        
+
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
         <script src="plugin/d3js/d3.v3.min.js"></script>
@@ -469,7 +461,7 @@ Kijk ook vooral in de **[source code](https://github.com/riezebosch/reveal-infos
 				history: true,
 				center: false,
                 theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: 'none', // default/cube/page/concave/zoom/linear/fade/none
+				transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
 
 				// Optional reveal.js plugins
 				dependencies: [
