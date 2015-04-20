@@ -157,20 +157,31 @@ body {
 }
 ```
 ---
-## Wat is er mogelijk met
-#Markdown
+<div style="width:100%; text-align=center">
+![markdown](img/markdown-mark.svg)<!-- .element: style="width: 10em; box-shadow: none;" -->
+</div>
+
 --
-## Titel
+# Titel1
+## Titel2
+### Titel3
 ```markdown
 # Titel1
 ## Titel2
 ### Titel3
 ```
-# Titel1
-## Titel2
-### Titel3
 --
-## Opsomming
+Bullet points
+
+* Punt 1
+* Punt 2
+
+Of genummerd
+
+1. Punt 1
+1. Punt 2
+1. Al het bovenstaande
+
 ```markdown
 Bullet points
 
@@ -183,18 +194,13 @@ Of genummerd
 1. Punt 2
 1. Al het bovenstaande
 ```
-Bullet points
-
-* Punt 1
-* Punt 2
-
-Of genummerd
-
-1. Punt 1
-1. Punt 2
-1. Al het bovenstaande
 --
-## Tabel
+auteur            | geboren | overleden | land
+------------------|:-------:|:---------:|-----
+Eliette Abécassis | 1969    | -         | Frankrijk
+Edmond About      | 1828    | 1885      | Frankrijk
+Paul Adam         | 1862    | 1920      | Frankrijk
+Gustave Aimard    | 1818    | 1863      | Frankrijk
 ```markdown
 auteur            | geboren | overleden | land
 ------------------|:-------:|:---------:|-----
@@ -203,24 +209,26 @@ Edmond About      | 1828    | 1885      | Frankrijk
 Paul Adam         | 1862    | 1920      | Frankrijk
 Gustave Aimard    | 1818    | 1863      | Frankrijk
 ```
-auteur            | geboren | overleden | land
-------------------|:-------:|:---------:|-----
-Eliette Abécassis | 1969    | -         | Frankrijk
-Edmond About      | 1828    | 1885      | Frankrijk
-Paul Adam         | 1862    | 1920      | Frankrijk
-Gustave Aimard    | 1818    | 1863      | Frankrijk
 --
-## Animaties
+* De simpele<!-- .element: class="fragment" -->
+* animaties met bullets<!-- .element: class="fragment" -->
+* werken al out-of-the-box<!-- .element: class="fragment" -->
+
 ```markdown
 * De simpele<!-- .element: class="fragment" -->
 * animaties met bullets<!-- .element: class="fragment" -->
 * werken al out-of-the-box<!-- .element: class="fragment" -->
 ```
-* De simpele<!-- .element: class="fragment" -->
-* animaties met bullets<!-- .element: class="fragment" -->
-* werken al out-of-the-box<!-- .element: class="fragment" -->
 --
-## Syntax Highlighting
+```cs
+class Program
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Some output");
+    }
+}
+```
 ```markdown
 '''cs
 class Program
@@ -232,20 +240,16 @@ class Program
 }
 '''
 ```
-```cs
-class Program
-{
-    public static void Main(string[] args)
-    {
-        Console.WriteLine("Some output");
-    }
-}
+--
+```sql
+CREATE PROCEDURE [dbo].[GetStudentGrades]
+            @StudentID int
+            AS
+            SELECT EnrollmentID, Grade, CourseID, StudentID FROM dbo.StudentGrade
+            WHERE StudentID = @StudentID
+
+GO
 ```
---
-## Integratie met .NET Fiddle
-<iframe width="100%" height="475" src="https://dotnetfiddle.net/Widget/CsCons" frameborder="0"></iframe>
---
-## Syntax Highlighting
 ```markdown
 '''sql
 CREATE PROCEDURE [dbo].[GetStudentGrades]
@@ -257,66 +261,53 @@ CREATE PROCEDURE [dbo].[GetStudentGrades]
 GO
 '''
 ```
-```sql
-CREATE PROCEDURE [dbo].[GetStudentGrades]
-            @StudentID int
-            AS
-            SELECT EnrollmentID, Grade, CourseID, StudentID FROM dbo.StudentGrade
-            WHERE StudentID = @StudentID
-
-GO
-```
 --
-## Syntax Highlighting
+```bash
+git commit -am 'my first commit'
+```
 ```markdown
 '''bash
 git commit -am 'my first commit'
 '''
 ```
-```bash
-git commit -am 'my first commit'
-```
 --
-## JavaScript Libraries embedden
-Beweeg de muis over het diagram.
-<div id="js-demo">
-</div>
---
-## Afbeeldingen
-```markdown
-![plaatje](img/1446389_58576922.jpg)
-```
 ![plaatje](img/1446389_58576922.jpg)
 
 <!-- .element: class="stretch" -->
+```markdown
+![plaatje](img/1446389_58576922.jpg)
+```
 --
-## Achtergrond
 <!-- .element: style="color: white" -->
 
 ```markdown
 <!-- .slide: data-background="img/background.jpg" -->
 ```
 <!-- .slide: data-background="img/background.jpg" -->
+---
+<div style="width:100%; text-align=center">
+![html5](img/HTML5_Logo.svg)<!-- .element: style="width: 10em; box-shadow: none;" -->
+</div>
 --
-## Video
+<div style="font-family:Comic Sans MS, Comic Sans; color:#FFFF00; text-align:center;">
+<h1 style="font-family:Comic Sans MS, Comic Sans; text-align:center;"><img src="img/geocities/spinningearth.gif" />HTML5<img src="img/geocities/spinningearth.gif" /></h1>
+<MARQUEE WIDTH=100% BEHAVIOR=SCROLL BGColor=yellow LOOP=100 style="color:#006600">Make A Presentation Look Like It Was Made By A 13 Year-Old In 1996</MARQUEE>
+<p style="text-align:center"><img src="img/geocities/hot.gif" />With The Power Of Html5 You Can Create Slides Looking Like A <a href="http://en.wikipedia.org/wiki/Geocities" style="color:#FFFFFF;">Geocities</a> page.<img src="img/geocities/hot.gif" /></p>
+<br/>
+<img src="img/geocities/genie.gif" /><img src="img/geocities/laptop-01.gif" /><img src="img/geocities/genie.gif" />
+<div style='height:100px; text-align:center'><img src='img/geocities/counter.gif'/><img src='img/geocities/ns_logo.gif'/><img src='img/geocities/ie_logo.gif'/><img src='img/geocities/noframes.gif'/><img src='img/geocities/notepad.gif'/></div>
+</div>
+<!-- .slide: data-background="img/geocities/bluerock.jpg" data-background-repeat="repeat" data-background-size="initial" -->
+--
+## D3.js
+<div id="js-demo">
+</div>
+--
+## .NET Fiddle
+<iframe width="100%" height="475" src="https://dotnetfiddle.net/Widget/CsCons" frameborder="0"></iframe>
+--
+## YouTube
 <iframe class="stretch" data-autoplay src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0&controls=0&showinfo=0&loop=1" frameborder="0" allowfullscreen></iframe>
-*Toegegeven, dit is geen markdown.*
---
-## Thema's
-Het wisselen van thema laat zien hoe eenvoudig een template kan worden aangepast:
-<ul>
-<li><a href="#" onclick="switchTemplate('infosupport.css'); return false;">Info Support</a></li>
-<li><a href="#" onclick="switchTemplate('black.css'); return false;">Black (default)</a></li>
-<li><a href="#" onclick="switchTemplate('white.css'); return false;">White</a></li>
-<li><a href="#" onclick="switchTemplate('league.css'); return false;">League</a></li>
-<li><a href="#" onclick="switchTemplate('sky.css'); return false;">Sky</a></li>
-<li><a href="#" onclick="switchTemplate('beige.css'); return false;">Beige</a></li>
-<li><a href="#" onclick="switchTemplate('simple.css'); return false;">Simple</a></li>
-<li><a href="#" onclick="switchTemplate('serif.css'); return false;">Serif</a></li>
-<li><a href="#" onclick="switchTemplate('night.css'); return false;">Night</a></li>
-<li><a href="#" onclick="switchTemplate('moon.css'); return false;">Moon</a></li>
-<li><a href="#" onclick="switchTemplate('solarized.css'); return false;">Solarized</a></li>
-</ul>
 ---
 ## Hoe werkt de
 # Viewer
@@ -383,7 +374,7 @@ b6b1020 loading en tracking
 d110383 initial commit
 ```
 --
-## Versiebeheer
+## Slides as Code
 ```diff
  # Entity Framework
 -Getting Started
@@ -405,13 +396,13 @@ d110383 initial commit
  ![image](01-Introduction/development-workflows-05.png)
 ```
 --
-## Versiebeheer
+## Branching & Merging
 ![history](img/history.png)<!-- .element: style="box-shadow: none" -->
 --
-## Cross Platform
+## Windows
 ![windows](img/visualstudio.png)
 --
-## Cross Platform
+## OS X
 ![apple](img/brackets.io.png)
 --
 ## Nadelen
@@ -419,6 +410,7 @@ d110383 initial commit
  * Editor + browser
 1. Moelijker met vormen, animaties en plaatjes
  * Er bestaat een online editor: http://slid.es
+ * Maar die moet je natuurlijk niet gebruiken.
 --
 ## Samenvattend
 Reveal.js
@@ -429,6 +421,7 @@ Reveal.js
   * Extra moeite voor doen
   * Op een andere manier invullen
   * Niet meer doen
+* HTML5 is leuk!
 ---
 # Reveal.js
 * Officiële presentatie: http://lab.hakim.se/reveal-js
