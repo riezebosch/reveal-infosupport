@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=News+Cycle:400,700);
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
 /**
+/**
  * A simple theme for reveal.js presentations, similar
  * to the default theme. The accent color is darkblue.
  *
@@ -11,11 +12,14 @@
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #fff;
+  background-image: url('../../img/waaier.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right bottom;
   background-color: #fff; }
 
 .reveal {
-  font-family: "Calibri", sans-serif;
+  font-family: 'Calibri', sans-serif;
   font-size: 36px;
   font-weight: normal;
   color: #000; }
@@ -143,8 +147,8 @@ body {
   overflow: auto;
   max-height: 400px;
   word-wrap: normal;
-  background: white;
-  color: black; }
+  background: #3F3F3F;
+  color: #DCDCDC; }
 
 .reveal table {
   margin: auto;
@@ -183,9 +187,9 @@ body {
 .reveal a {
   color: #00008B;
   text-decoration: none;
-  -webkit-transition: color 0.15s ease;
-  -moz-transition: color 0.15s ease;
-  transition: color 0.15s ease; }
+  -webkit-transition: color .15s ease;
+  -moz-transition: color .15s ease;
+  transition: color .15s ease; }
 
 .reveal a:hover {
   color: #0000f1;
@@ -202,13 +206,13 @@ body {
 .reveal section img {
   margin: 15px 0px;
   background: rgba(255, 255, 255, 0.12);
-  /*border: 4px solid #000;*/
+  border: 4px solid #000;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
 
 .reveal a img {
-  -webkit-transition: all 0.15s linear;
-  -moz-transition: all 0.15s linear;
-  transition: all 0.15s linear; }
+  -webkit-transition: all .15s linear;
+  -moz-transition: all .15s linear;
+  transition: all .15s linear; }
 
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
@@ -260,41 +264,31 @@ body {
 .reveal .slide-number {
   color: #00008B; }
 
-section :not(h1) :not(h2) :not(h3) :first-child:before {
-    
-}
+/*********************************************
+ * Some customizations that aren't available as option
+ *********************************************/
+.reveal pre code {
+  background: white;
+  color: black; }
 
-p {
-    text-align: left;
-}
+.reveal section img {
+  border: none; }
 
-h1, h2, h3 {
-    text-align: left;
-}
+h1, h2, h3, p {
+  text-align: left; }
 
 ul, ol {
-    width: 100%;
-}
-
-/*********************************************
- * LAYOUT
- *********************************************/
-body {
-    background-image: url('../../img/waaier.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right bottom;
-}
+  width: 100%; }
 
 .reveal::after {
-    content: "";
-    background-image: url(../../img/logo.svg);
-    background-repeat: no-repeat;
-    bottom: 15px;
-    left: 15px;
-    height: 5%;
-    width: 100%;
-    position: absolute;
-    background-size: contain;
-}
+  content: "";
+  background-image: url(../../img/logo.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  height: 5%;
+  width: 100%; }
 
+/*# sourceMappingURL=infosupport.css.map */

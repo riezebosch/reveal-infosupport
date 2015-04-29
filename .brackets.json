@@ -1,0 +1,15 @@
+{
+    "sass.enabled": false,
+    "sass.compiler": "libsass",    
+    "path": {
+        "css/theme/source/infosupport.scss": {
+            "sass.enabled": true,
+            "sass.options": {
+                "outputDir": "../",
+                "includePaths": [],
+                "sourceComments": false,
+                "outputStyle": "nested"
+            }
+        }
+    }
+}
