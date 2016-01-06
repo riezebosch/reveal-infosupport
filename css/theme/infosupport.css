@@ -11,18 +11,25 @@
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
+@font-face{
+	font-family: 'Calibri';
+	src: url('/lib/font/Calibri.ttf') format('truetype');
+}
+
 body {
-  background-image: url('../../img/waaier.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: right bottom;
   background-color: #fff; }
 
 .reveal {
   font-family: 'Calibri', sans-serif;
   font-size: 36px;
   font-weight: normal;
-  color: #000; }
+  color: #000; 
+  background-image: url('waaier.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right bottom;
+    background-color: white;
+}
 
 ::selection {
   color: #fff;
